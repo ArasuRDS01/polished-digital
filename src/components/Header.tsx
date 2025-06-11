@@ -1,9 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme');
@@ -29,6 +31,11 @@ const Header = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false); // Close mobile menu after navigation
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
@@ -39,6 +46,7 @@ const Header = () => {
             Portfolio
           </div>
           
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
@@ -72,15 +80,64 @@ const Header = () => {
             </button>
           </nav>
 
-          <Button
-            onClick={toggleTheme}
-            variant="outline"
-            size="sm"
-            className="ml-4"
-          >
-            {isDark ? '☀️' : '🌙'}
-          </Button>
+          <div className="flex items-center space-x-4">
+            <Button
+              onClick={toggleTheme}
+              variant="outline"
+              size="sm"
+            >
+              {isDark ? '☀️' : '🌙'}
+            </Button>
+
+            {/* Mobile Menu Button */}
+            <Button
+              onClick={toggleMobileMenu}
+              variant="outline"
+              size="sm"
+              className="md:hidden"
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </Button>
+          </div>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="md:hidden bg-background/95 backdrop-blur-md border-t">
+            <nav className="flex flex-col py-4 space-y-4">
+              <button 
+                onClick={() => scrollToSection('home')}
+                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
+              >
+                Home
+              </button>
+              <button 
+                onClick={() => scrollToSection('skills')}
+                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
+              >
+                Skills
+              </button>
+              <button 
+                onClick={() => scrollToSection('experience')}
+                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
+              >
+                Experience
+              </button>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
+              >
+                Projects
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')}
+                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
+              >
+                Contact
+              </button>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );
