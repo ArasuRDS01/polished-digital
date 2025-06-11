@@ -138,76 +138,51 @@ const Contact = () => {
           </Card>
 
           {/* Contact Information */}
-          <div className="space-y-8">
-            <Card className="p-8">
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+          <Card className="p-8">
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 portfolio-gradient rounded-lg flex items-center justify-center text-white text-xl">
+                  📧
+                </div>
+                <div>
+                  <h4 className="font-medium">Email</h4>
+                  <button 
+                    onClick={handleEmailClick}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    john.developer@email.com
+                  </button>
+                </div>
+              </div>
               
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 portfolio-gradient rounded-lg flex items-center justify-center text-white text-xl">
-                    📧
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Email</h4>
-                    <button 
-                      onClick={handleEmailClick}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      john.developer@email.com
-                    </button>
-                  </div>
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 portfolio-gradient rounded-lg flex items-center justify-center text-white text-xl">
+                  💼
                 </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 portfolio-gradient rounded-lg flex items-center justify-center text-white text-xl">
-                    💼
-                  </div>
-                  <div>
-                    <h4 className="font-medium">LinkedIn</h4>
-                    <button 
-                      onClick={handleLinkedInClick}
-                      className="text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      Connect with me professionally
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 portfolio-gradient rounded-lg flex items-center justify-center text-white text-xl">
-                    📍
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Location</h4>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
-                  </div>
+                <div>
+                  <h4 className="font-medium">LinkedIn</h4>
+                  <button 
+                    onClick={handleLinkedInClick}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Connect with me professionally
+                  </button>
                 </div>
               </div>
-            </Card>
-
-            <Card className="p-8 text-center">
-              <h3 className="text-2xl font-semibold mb-4">Let's Connect</h3>
-              <p className="text-muted-foreground mb-6">
-                I'm always open to discussing new opportunities, innovative projects, 
-                or potential collaborations.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <Button 
-                  onClick={handleEmailClick}
-                  className="portfolio-gradient hover:opacity-90 transition-opacity"
-                >
-                  Email Me
-                </Button>
-                <Button 
-                  onClick={handleLinkedInClick}
-                  variant="outline"
-                  className="hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  LinkedIn
-                </Button>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-12 h-12 portfolio-gradient rounded-lg flex items-center justify-center text-white text-xl">
+                  📍
+                </div>
+                <div>
+                  <h4 className="font-medium">Location</h4>
+                  <p className="text-muted-foreground">San Francisco, CA</p>
+                </div>
               </div>
-            </Card>
-          </div>
+            </div>
+          </Card>
         </div>
       </div>
     </section>
