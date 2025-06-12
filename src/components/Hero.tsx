@@ -36,7 +36,7 @@ const Hero = () => {
               <h1 className="text-4xl lg:text-6xl font-bold">
                 <span className="block">Elavarasan R</span>
                 <span className="block portfolio-gradient bg-clip-text text-transparent">
-                 Web Developer Developer
+                 Web Developer 
                 </span>
               </h1>
               
