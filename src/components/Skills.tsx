@@ -13,32 +13,24 @@ const Skills = () => {
     intermediate: [
       { name: 'JavaScript', icon: '⚡' },
       { name: 'React', icon: '⚛️' },
-      { name: 'Node.js', icon: '🟢' },
-      { name: 'MongoDB', icon: '🍃' }
+   
     ],
-    advanced: [
-      { name: 'TypeScript', icon: '📘' },
-      { name: 'Next.js', icon: '▲' },
-      { name: 'AWS', icon: '☁️' }
-    ]
+   
   };
 
   const certifications = [
     {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
+      name: 'JavaScript ',
+      issuer: 'Guvi',
       year: '2024'
     },
     {
-      name: 'AWS Solutions Architect',
+      name: 'HTML and  CSS',
       issuer: 'Amazon',
       year: '2023'
     },
-    {
-      name: 'JavaScript Algorithms',
-      issuer: 'freeCodeCamp',
-      year: '2023'
-    }
+   
+   
   ];
 
   const handleDownloadCertification = (certName: string) => {

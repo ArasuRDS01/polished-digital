@@ -14,29 +14,7 @@ const Experience = () => {
         'Mentored 3 junior developers'
       ]
     },
-    {
-      title: 'Full Stack Developer',
-      company: 'Digital Innovations Ltd.',
-      period: '2020 - 2022',
-      description: 'Developed end-to-end web applications using MERN stack. Implemented RESTful APIs and optimized database performance.',
-      achievements: [
-        'Built 5+ production applications',
-        'Implemented CI/CD pipelines',
-        'Improved system performance by 45%'
-      ]
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'StartupXYZ',
-      period: '2019 - 2020',
-      description: 'Created responsive web interfaces and collaborated closely with UX/UI designers to implement pixel-perfect designs.',
-      achievements: [
-        'Delivered 10+ client projects',
-        'Achieved 99% client satisfaction',
-        'Reduced development time by 30%'
-      ]
-    }
-  ];
+   ];
 
   const education = [
     {
@@ -50,17 +28,7 @@ const Experience = () => {
         'President of Computer Science Society'
       ]
     },
-    {
-      degree: 'Advanced Web Development Bootcamp',
-      institution: 'Code Academy Pro',
-      period: '2019',
-      description: 'Intensive 6-month program covering modern web development technologies and best practices.',
-      highlights: [
-        'Top 5% of cohort',
-        'Built 8 real-world projects',
-        'Received industry mentorship'
-      ]
-    }
+    
   ];
 
   return (
