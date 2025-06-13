@@ -1,3 +1,4 @@
+
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -11,11 +12,10 @@ const Skills = () => {
     ],
     intermediate: [
       { name: 'JavaScript', icon: '⚡' },
-      { name: 'React', icon: '⚛️' },
     ],
-    advanced: [
-      { name: 'TypeScript', icon: '🔷' },
-      { name: 'Node.js', icon: '🟢' }
+    currentlyExploring: [
+      { name: 'React JS', icon: '⚛️' },
+      { name: 'Backend Technologies', icon: '🔧' }
     ]
   };
 
@@ -78,9 +78,9 @@ const Skills = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-medium mb-3 text-red-600 dark:text-red-400">Advanced</h4>
+                <h4 className="text-lg font-medium mb-3 text-blue-600 dark:text-blue-400">Currently Exploring</h4>
                 <div className="flex flex-wrap gap-2">
-                  {skillCategories.advanced.map((skill) => (
+                  {skillCategories.currentlyExploring.map((skill) => (
                     <Badge key={skill.name} className="skill-advanced text-sm py-2 px-3">
                       {skill.icon} {skill.name}
                     </Badge>
