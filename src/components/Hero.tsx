@@ -21,7 +21,7 @@ const Hero = () => {
             <Card className="p-8 hover-scale">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=400&h=400&fit=crop&crop=face"
+                  src="/lovable-uploads/4a71d8ff-02fd-4090-b483-ede88521a52a.png"
                   alt="Professional headshot"
                   className="w-80 h-80 object-cover rounded-lg shadow-lg"
                 />
