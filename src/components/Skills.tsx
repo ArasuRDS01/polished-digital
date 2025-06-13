@@ -1,4 +1,3 @@
-
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -13,9 +12,11 @@ const Skills = () => {
     intermediate: [
       { name: 'JavaScript', icon: '⚡' },
       { name: 'React', icon: '⚛️' },
-   
     ],
-   
+    advanced: [
+      { name: 'TypeScript', icon: '🔷' },
+      { name: 'Node.js', icon: '🟢' }
+    ]
   };
 
   const certifications = [
@@ -29,8 +30,6 @@ const Skills = () => {
       issuer: 'Amazon',
       year: '2023'
     },
-   
-   
   ];
 
   const handleDownloadCertification = (certName: string) => {
