@@ -4,14 +4,14 @@ import { Card } from '@/components/ui/card';
 const Experience = () => {
   const professionalExperience = [
     {
-      title: 'Senior Frontend Developer',
-      company: 'Tech Solutions Inc.',
-      period: '2022 - Present',
-      description: 'Led frontend development for multiple web applications using React and TypeScript. Collaborated with cross-functional teams to deliver high-quality user experiences.',
+      title: 'Web Developer Trainee',
+      company: 'WMP Creative Agency',
+      period: 'Internship - Remote',
+      description: 'Gained valuable experience working within a specific industry, applying learned concepts directly into relevant work situations.',
       achievements: [
-        'Increased user engagement by 40%',
-        'Reduced loading time by 60%',
-        'Mentored 3 junior developers'
+        'Applied theoretical knowledge to real-world projects',
+        'Developed practical web development skills',
+        'Collaborated with experienced professionals'
       ]
     },
    ];
