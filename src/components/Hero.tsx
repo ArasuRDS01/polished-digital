@@ -4,8 +4,7 @@ import { Card } from '@/components/ui/card';
 
 const Hero = () => {
   const handleDownloadCV = () => {
-   const link = document.createElement('a');
-    link.href = '/public/elavarasan_resume.pdf'; // Path relative to public/
+    link.href = '/elavarasan_resume.pdf'; // Path relative to public/
     link.download = 'elavarasan_resume.pdf'; // File name for download
     link.click();
     // This would typically download a PDF file
