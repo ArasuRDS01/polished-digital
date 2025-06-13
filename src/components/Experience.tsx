@@ -18,14 +18,23 @@ const Experience = () => {
 
   const education = [
     {
-      degree: 'Bachelor of Science in Computer Science',
-      institution: 'University of Technology',
-      period: '2015 - 2019',
+      degree: 'Master of Science in Computer Science',
+      institution: 'Government Arts College Salem-7',
+      period: '2021 - 2023',
       description: 'Focused on software engineering, algorithms, and web technologies. Graduated with First Class Honours.',
       highlights: [
-        'GPA: 3.8/4.0',
-        'Dean\'s List for 6 semesters',
-        'President of Computer Science Society'
+        'GPA:6.7 ',
+        
+      ]
+    },
+    {
+      degree: 'Bachelor of Science in Computer Science',
+      institution: 'Government Arts College Salem-7',
+      period: '2018 - 2021',
+      description: 'Focused on software engineering, algorithms, and web technologies. Graduated with First Class Honours.',
+      highlights: [
+        'GPA:6.9 ',
+        
       ]
     },
     
