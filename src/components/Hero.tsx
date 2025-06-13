@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   const handleLinkedInClick = () => {
-    window.open('https://linkedin.com/in/yourprofile', '_blank');
+    window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
   };
 
   return (
@@ -34,6 +34,7 @@ const Hero = () => {
           <div className="space-y-6 text-center lg:text-left">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold">
+                <span className="block">Hi I'm</span>
                 <span className="block">Elavarasan R</span>
                 <span className="block portfolio-gradient bg-clip-text text-transparent">
                  Web Developer 

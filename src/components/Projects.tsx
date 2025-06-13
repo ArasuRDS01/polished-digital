@@ -13,14 +13,7 @@ const Projects = () => {
       demoUrl: 'https://demo-ecommerce.com',
       githubUrl: 'https://github.com/username/ecommerce-platform'
     },
-    {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, team collaboration features, and progress tracking.',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop',
-      technologies: ['TypeScript', 'React', 'Socket.io', 'PostgreSQL'],
-      demoUrl: 'https://demo-taskmanager.com',
-      githubUrl: 'https://github.com/username/task-manager'
-    },
+    
     {
       title: 'Weather Dashboard',
       description: 'A responsive weather application with location-based forecasts, interactive maps, and weather alerts.',
@@ -34,7 +27,7 @@ const Projects = () => {
       description: 'A modern, responsive portfolio website showcasing projects, skills, and professional experience.',
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
-      demoUrl: 'https://demo-portfolio.com',
+      demoUrl: 'https://polished-digital.lovable.app',
       githubUrl: 'https://github.com/username/portfolio'
     }
   ];
@@ -107,7 +100,7 @@ const Projects = () => {
           <Button 
             variant="outline" 
             size="lg"
-            onClick={() => window.open('https://github.com/username', '_blank')}
+            onClick={() => window.open('https://github.com/ArasuRDS01', '_blank')}
             className="hover:bg-primary hover:text-primary-foreground transition-colors"
           >
             View All Projects on GitHub

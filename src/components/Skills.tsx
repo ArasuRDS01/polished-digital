@@ -27,7 +27,7 @@ const Skills = () => {
     },
     {
       name: 'HTML and  CSS',
-      issuer: 'Amazon',
+      issuer: 'Guvi',
       year: '2023'
     },
   ];
