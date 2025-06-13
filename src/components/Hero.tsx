@@ -2,12 +2,13 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
-const Hero = () => {
-  const handleDownloadCV = () => {
-    link.href = '/elavarasan_resume.pdf'; // Path relative to public/
-    link.download = 'elavarasan_resume.pdf'; // File name for download
-    link.click();
-    // This would typically download a PDF file
+const handleDownloadCV = () => {
+  const link = document.createElement('a');
+  link.href = '/elavarasan_resume.pdf'; // ✅ path relative to public/
+  link.download = 'elavarasan_resume.pdf'; // ✅ filename to save as
+  document.body.appendChild(link); // required for some browsers
+  link.click();
+  document.body.removeChild(link);
     
   };
 
