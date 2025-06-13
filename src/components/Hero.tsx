@@ -4,8 +4,12 @@ import { Card } from '@/components/ui/card';
 
 const Hero = () => {
   const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/public/elavarasan_resume.pdf'; // Ensure the file exists in the public directory
+    link.download = 'elavarasan_resume.pdf';
+    link.click()
     // This would typically download a PDF file
-    console.log('Downloading CV...');
+    
   };
 
   const handleLinkedInClick = () => {
@@ -46,11 +50,9 @@ const Hero = () => {
               </h2>
               
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Passionate web developer with expertise in modern technologies. 
-                I create beautiful, responsive, and user-friendly applications that 
-                solve real-world problems. With a strong foundation in both frontend 
-                and backend development, I bring ideas to life through clean, 
-                efficient code.
+                Enthusiastic and self-driven web developer with foundational knowledge in HTML, CSS, and JavaScript.
+                 Currently learning React.js and backend technologies to build full stack applications.
+                 Strong interest in creating responsive, user-friendly interfaces and scalable solutions.
               </p>
             </div>
 
