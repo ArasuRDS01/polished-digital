@@ -2,13 +2,12 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
-function Hero() {
-  Add; commentMore; actions;
+const Hero = () => {
   const handleDownloadCV = () => {
-    link.href = '/elavarasan_resume.pdf'; // Path relative to public/
-    link.download = 'elavarasan_resume.pdf'; // File name for download
-    link.click();
+    // This would typically download a PDF file
+    console.log('Downloading CV...');
   };
+
 
   const handleLinkedInClick = () => {
     window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
