@@ -40,11 +40,11 @@ const Contact = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:john.developer@email.com';
+    window.location.href = 'mailto:elavarasa.fsdev@email.com';
   };
 
   const handleLinkedInClick = () => {
-    window.open('https://linkedin.com/in/yourprofile', '_blank');
+    window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
   };
 
   return (
@@ -152,7 +152,7 @@ const Contact = () => {
                     onClick={handleEmailClick}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    john.developer@email.com
+                    elavarasan.fsdev@email.com
                   </button>
                 </div>
               </div>
@@ -178,7 +178,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-medium">Location</h4>
-                  <p className="text-muted-foreground">San Francisco, CA</p>
+                  <p className="text-muted-foreground">Salem,Tamil nadu,India.</p>
                 </div>
               </div>
             </div>
