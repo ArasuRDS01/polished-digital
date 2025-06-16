@@ -21,9 +21,7 @@ const Experience = () => {
       degree: 'Master of Science in Computer Science',
       institution: 'Government Arts College Salem-7',
       period: '2021 - 2023',
-      description: 'Pursuing a degree in Computer Science, where I’ve been exploring everything from software development to how computers really
-        work behind the scenes.
-        It's been a great mix of theory and hands-on learning, and it’s helped shape my interest in building and understanding tech.',
+      description: 'Focused on software engineering, algorithms, and web technologies. Graduated with First Class Honours.',
       highlights: [
         'GPA:6.7 ',
         
