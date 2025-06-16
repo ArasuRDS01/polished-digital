@@ -5,7 +5,7 @@ import { Card } from '@/components/ui/card';
 const Hero = () => {
   const handleDownloadCV = () => {
     // This would typically download a PDF file
-    console.log('Downloading CV...');
+    console.log('/elavarasan_resume.pdf');
   };
 
   function handleLinkedInClick() {
