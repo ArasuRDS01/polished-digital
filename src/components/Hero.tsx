@@ -2,13 +2,24 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 
-const Hero = () => {
-  const handleDownloadCV = () => {
-    // This would typically download a PDF file
-    console.log('/elavarasan_resume.pdf');
-  };
+const handleDownloadCV = () => {
+  try {
+    const link = document.createElement('a');
+    link.href = '/elavarasan_resume.pdf'; // Make sure this file exists in your public folder
+    link.download = 'Elavarasan_Resume.pdf'; // Better filename formatting
+    link.setAttribute('aria-label', 'Download CV'); // Accessibility improvement
+    link.style.display = 'none'; // Hide the element
+    
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  } catch (error) {
+    console.error('Error downloading CV:', error);
+    // You might want to add user feedback here (e.g., toast notification)
+  }
+};
 
-  function handleLinkedInClick() {
+  const handleLinkedInClick = () => {
     window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
   }
 
