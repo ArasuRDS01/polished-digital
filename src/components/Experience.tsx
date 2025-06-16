@@ -21,7 +21,7 @@ const Experience = () => {
       degree: 'Master of Science in Computer Science',
       institution: 'Government Arts College Salem-7',
       period: '2021 - 2023',
-      description: 'Focused on software engineering, algorithms, and web technologies. Graduated with First Class Honours.',
+      description: 'After my UG, I went on to do my Master’s in Computer Science. This helped me dive deeper into advanced topics and gave me more clarity on how technology is applied in real-world scenarios. It was a great opportunity to expand my knowledge and explore areas I was really interested in.',
       highlights: [
         'GPA:6.7 ',
         
@@ -31,7 +31,7 @@ const Experience = () => {
       degree: 'Bachelor of Science in Computer Science',
       institution: 'Government Arts College Salem-7',
       period: '2018 - 2021',
-      description: 'Focused on software engineering, algorithms, and web technologies. Graduated with First Class Honours.',
+      description: 'I completed my Bachelor’s degree in Computer Science, where I got a solid understanding of computer systems, programming concepts, and basic tech principles. It gave me a good foundation and sparked my interest in technology and how things work behind the scenes.',
       highlights: [
         'GPA:6.9 ',
         
