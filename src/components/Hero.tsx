@@ -5,21 +5,13 @@ import { Card } from '@/components/ui/card';
 const Hero = () => {
   const handleDownloadCV = () => {
     // This would typically download a PDF file
-<<<<<<< HEAD
-    console.log('/elavarasan_resume.pdf');
-=======
     console.log('Downloading CV...');
   };
 
 
-  const handleLinkedInClick = () => {
+   const handleLinkedInClick = () => {
     window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
->>>>>>> 093f3926d6184eb8cbe2ce1545ba1cfd3401d15b
   };
-
-  function handleLinkedInClick() {
-    window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
-  }
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8">
