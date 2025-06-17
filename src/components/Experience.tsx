@@ -21,9 +21,11 @@ const Experience = () => {
       degree: 'Master of Science in Computer Science',
       institution: 'Government Arts College Salem-7',
       period: '2021 - 2023',
-      description: 'After my UG, I went on to do my Master’s in Computer Science. This helped me dive deeper into advanced topics and gave me more clarity on how technology is applied in real-world scenarios. It was a great opportunity to expand my knowledge and explore areas I was really interested in.',
+      description: 'After finishing my undergraduate degree, I decided to pursue a Master’s in Computer Science. It was an exciting time that really deepened my understanding of the field and showed me how technology connects to real-world challenges. It also gave me the chance to explore areas I was genuinely passionate about and helped shape the kind of work I want to do moving forward',
       highlights: [
         'GPA:6.7 ',
+        'Built real-world projects that strengthened practical skills',
+        'Improved problem-solving through research and experimentation',
         
       ]
     },
