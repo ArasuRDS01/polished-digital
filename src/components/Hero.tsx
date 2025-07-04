@@ -4,8 +4,10 @@ import { Card } from '@/components/ui/card';
 
 const Hero = () => {
   const handleDownloadCV = () => {
-    // This would typically download a PDF file
-    console.log('Downloading CV...');
+    const link = document.createElement('a');
+    link.href = '/elavarasan_Resume.pdf'; // path in the public folder
+    link.download = 'Elavarasan_Resume.pdf'; // name for the downloaded file
+    link.click();
   };
 
 
@@ -42,7 +44,7 @@ const Hero = () => {
               </h1>
 
               <h2 className="text-xl lg:text-2xl text-muted-foreground font-medium">
-                Full Stack Web Developer
+                
               </h2>
 
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">

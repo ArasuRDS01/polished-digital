@@ -36,6 +36,9 @@ const Experience = () => {
       description: 'I completed my Bachelor’s degree in Computer Science, where I got a solid understanding of computer systems, programming concepts, and basic tech principles. It gave me a good foundation and sparked my interest in technology and how things work behind the scenes.',
       highlights: [
         'GPA:6.9 ',
+        'Completed a full-time undergraduate program in Computer Science.',
+        'Maintained steady academic progress throughout the course.',
+        'Actively participated in department events and academic activities.',
         
       ]
     },

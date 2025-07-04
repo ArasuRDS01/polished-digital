@@ -8,7 +8,8 @@ const Skills = () => {
     basic: [
       { name: 'HTML', icon: '🌐' },
       { name: 'CSS', icon: '🎨' },
-      { name: 'Git', icon: '📝' }
+      { name: 'Git & GitHub', icon: '📝' }
+     
     ],
     intermediate: [
       { name: 'JavaScript', icon: '⚡' },
