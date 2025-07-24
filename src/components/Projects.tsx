@@ -6,23 +6,6 @@ import { Badge } from '@/components/ui/badge';
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with user authentication, payment processing, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      demoUrl: 'https://demo-ecommerce.com',
-      githubUrl: 'https://github.com/username/ecommerce-platform'
-    },
-    
-    {
-      title: 'Weather Dashboard',
-      description: 'A responsive weather application with location-based forecasts, interactive maps, and weather alerts.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
-      technologies: ['JavaScript', 'React', 'OpenWeather API', 'Chart.js'],
-      demoUrl: 'https://demo-weather.com',
-      githubUrl: 'https://github.com/username/weather-dashboard'
-    },
-    {
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website showcasing projects, skills, and professional experience.',
       image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop',
@@ -30,6 +13,24 @@ const Projects = () => {
       demoUrl: 'https://polished-digital.lovable.app',
       githubUrl: 'https://github.com/username/portfolio'
     }
+    {
+      title: 'Theme-Selling Platform',
+      description: 'Theme Selling Platform is a web-based application developed during my PG course to manage and sell website themes. It supports theme uploads, displays details like price and description, and includes search functionality. The preview feature is currently incomplete due to path issues and is planned for future improvement..',
+      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop',
+      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      demoUrl: 'https://demo-ecommerce.com',
+      githubUrl: 'https://github.com/username/ecommerce-platform'
+    },
+    
+    {
+      title: 'Student Project Managment ',
+      description: 'This is a simple web-based application that allows students to submit their project details for staff approval. The system helps in managing, viewing, and organizing student project submissions..',
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'SQL'],
+      demoUrl: '',
+      githubUrl: 'https://github.com/username/weather-dashboard'
+    },
+  
   ];
 
   const handleDemo = (url: string) => {
