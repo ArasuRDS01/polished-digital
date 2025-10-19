@@ -12,7 +12,7 @@ const Projects = () => {
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
       demoUrl: 'https://polished-digital.lovable.app',
       githubUrl: 'https://github.com/username/portfolio'
-    }
+    },
     {
       title: 'Theme-Selling Platform',
       description: 'Theme Selling Platform is a web-based application developed during my PG course to manage and sell website themes. It supports theme uploads, displays details like price and description, and includes search functionality. The preview feature is currently incomplete due to path issues and is planned for future improvement..',
