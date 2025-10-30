@@ -55,22 +55,10 @@ const Header = () => {
               About Me
             </button>
             <button 
-              onClick={() => scrollToSection('skills')}
+              onClick={() => scrollToSection('portfolio')}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Skills
-            </button>
-            <button 
-              onClick={() => scrollToSection('experience')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Projects
+              Portfolio
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -109,25 +97,13 @@ const Header = () => {
                 onClick={() => scrollToSection('home')}
                 className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
               >
-                Home
+                About Me
               </button>
               <button 
-                onClick={() => scrollToSection('skills')}
+                onClick={() => scrollToSection('portfolio')}
                 className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
               >
-                Skills
-              </button>
-              <button 
-                onClick={() => scrollToSection('experience')}
-                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
-              >
-                Experience
-              </button>
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
-              >
-                Projects
+                Portfolio
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}

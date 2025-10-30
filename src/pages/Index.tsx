@@ -43,18 +43,14 @@ const Index = () => {
           <div className="section-fade-in">
             <Hero />
           </div>
-        <div className="section-fade-in">
-          <Skills />
-        </div>
-        <div className="section-fade-in">
-          <Experience />
-        </div>
-        <div className="section-fade-in">
-          <Projects />
-        </div>
-        <div className="section-fade-in">
-          <Contact />
-        </div>
+          <div id="portfolio" className="section-fade-in">
+            <Skills />
+            <Experience />
+            <Projects />
+          </div>
+          <div className="section-fade-in">
+            <Contact />
+          </div>
         </main>
         <Footer />
       </div>
