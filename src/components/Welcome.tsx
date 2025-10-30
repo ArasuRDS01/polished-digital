@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Button } from '@/components/ui/button';
 
 interface WelcomeProps {
   onComplete: () => void;
@@ -10,7 +9,12 @@ const Welcome = ({ onComplete }: WelcomeProps) => {
 
   useEffect(() => {
     setIsVisible(true);
-  }, []);
+    const timer = setTimeout(() => {
+      onComplete();
+    }, 3000);
+    
+    return () => clearTimeout(timer);
+  }, [onComplete]);
 
   return (
     <div 
@@ -27,15 +31,6 @@ const Welcome = ({ onComplete }: WelcomeProps) => {
             Discover my journey as a web developer
           </p>
         </div>
-        
-        <Button 
-          onClick={onComplete}
-          size="lg"
-          className="portfolio-gradient hover:opacity-90 transition-opacity animate-scale-in mt-8"
-          style={{ animationDelay: '0.6s' }}
-        >
-          Enter Portfolio
-        </Button>
       </div>
     </div>
   );
