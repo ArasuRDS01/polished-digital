@@ -32,7 +32,7 @@ const Contact = () => {
     setTimeout(() => {
       toast({
         title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        description: `${formData.name}, your message was successfully sent. I'll get back to you soon.`,
       });
       setFormData({ name: '', email: '', subject: '', message: '' });
       setIsSubmitting(false);
