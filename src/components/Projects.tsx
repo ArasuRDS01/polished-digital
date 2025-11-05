@@ -55,7 +55,7 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover-scale group">
+            <Card key={index} className="overflow-hidden hover-scale group flex flex-col h-full">
               <div className="relative">
                 <img
                   src={project.image}
@@ -65,9 +65,9 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <div className="p-6 space-y-4">
+              <div className="p-6 space-y-4 flex flex-col flex-1">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="text-muted-foreground">{project.description}</p>
+                <p className="text-muted-foreground flex-1">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
