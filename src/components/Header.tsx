@@ -1,9 +1,12 @@
 
 import { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -28,10 +31,20 @@ const Header = () => {
     }
   };
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-    setIsMobileMenuOpen(false); // Close mobile menu after navigation
+  const handleNavigation = (path: string, sectionId?: string) => {
+    if (location.pathname !== path) {
+      navigate(path);
+      if (sectionId) {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          element?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else if (sectionId) {
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMobileMenuOpen(false);
   };
 
   const toggleMobileMenu = () => {
@@ -49,34 +62,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNavigation('/')}
               className="text-foreground hover:text-primary transition-colors"
             >
-              About Me
+              Home
             </button>
             <button 
-              onClick={() => scrollToSection('skills')}
+              onClick={() => handleNavigation('/about')}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Skills
-            </button>
-            <button 
-              onClick={() => scrollToSection('experience')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Experience
-            </button>
-            <button 
-              onClick={() => scrollToSection('projects')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Projects
-            </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Contact
+              About
             </button>
           </nav>
 
@@ -106,34 +101,16 @@ const Header = () => {
           <div className="md:hidden bg-background/95 backdrop-blur-md border-t">
             <nav className="flex flex-col py-4 space-y-4">
               <button 
-                onClick={() => scrollToSection('home')}
+                onClick={() => handleNavigation('/')}
                 className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
               >
                 Home
               </button>
               <button 
-                onClick={() => scrollToSection('skills')}
+                onClick={() => handleNavigation('/about')}
                 className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
               >
-                Skills
-              </button>
-              <button 
-                onClick={() => scrollToSection('experience')}
-                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
-              >
-                Experience
-              </button>
-              <button 
-                onClick={() => scrollToSection('projects')}
-                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
-              >
-                Projects
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
-              >
-                Contact
+                About
               </button>
             </nav>
           </div>
