@@ -1,19 +1,9 @@
 
-import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
-  const [expandedProjects, setExpandedProjects] = useState<number[]>([]);
-
-  const toggleExpand = (index: number) => {
-    setExpandedProjects(prev => 
-      prev.includes(index) 
-        ? prev.filter(i => i !== index)
-        : [...prev, index]
-    );
-  };
   const projects = [
     {
       title: 'Portfolio Website',
@@ -75,21 +65,9 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <div className="p-6 space-y-4 flex flex-col h-full">
+              <div className="p-6 space-y-4">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
-                <div className="flex-1">
-                  <p className={`text-muted-foreground ${!expandedProjects.includes(index) && project.description.length > 150 ? 'line-clamp-3' : ''}`}>
-                    {project.description}
-                  </p>
-                  {project.description.length > 150 && (
-                    <button
-                      onClick={() => toggleExpand(index)}
-                      className="text-primary hover:underline text-sm mt-2 font-medium"
-                    >
-                      {expandedProjects.includes(index) ? 'Show Less' : 'Read More'}
-                    </button>
-                  )}
-                </div>
+                <p className="text-muted-foreground">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
