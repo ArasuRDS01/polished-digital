@@ -1,9 +1,10 @@
-
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const Projects = () => {
+  const [expandedProjects, setExpandedProjects] = useState<number[]>([]);
   const projects = [
     {
       title: 'Portfolio Website',
@@ -41,6 +42,14 @@ const Projects = () => {
     window.open(url, '_blank');
   };
 
+  const toggleExpanded = (index: number) => {
+    setExpandedProjects(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   return (
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/20">
       <div className="max-w-7xl mx-auto">
@@ -67,7 +76,19 @@ const Projects = () => {
               
               <div className="p-6 space-y-4 flex flex-col flex-1">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="text-muted-foreground flex-1">{project.description}</p>
+                <div className="flex-1">
+                  <p className={`text-muted-foreground ${!expandedProjects.includes(index) ? 'line-clamp-4' : ''}`}>
+                    {project.description}
+                  </p>
+                  {project.description.length > 200 && (
+                    <button
+                      onClick={() => toggleExpanded(index)}
+                      className="text-primary text-sm mt-1 hover:underline"
+                    >
+                      {expandedProjects.includes(index) ? 'Show less' : 'Show more'}
+                    </button>
+                  )}
+                </div>
                 
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
