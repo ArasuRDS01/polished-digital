@@ -102,6 +102,45 @@
     background: linear-gradient(135deg, hsl(var(--portfolio-gradient-start)), hsl(var(--portfolio-gradient-end)));
   }
 
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-slow-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes bounce-slow {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+  }
+
+  .animate-spin-slow-reverse {
+    animation: spin-slow-reverse 4s linear infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+  }
+
   .skill-basic {
     @apply bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200;
   }

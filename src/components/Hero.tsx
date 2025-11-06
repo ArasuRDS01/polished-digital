@@ -6,12 +6,12 @@ const Hero = () => {
   const [isTextHovered, setIsTextHovered] = useState(false);
 
   const programmingSymbols = [
-    { icon: Code2, label: 'HTML/CSS', color: 'hsl(16, 100%, 50%)' },
-    { icon: Braces, label: 'JavaScript', color: 'hsl(53, 93%, 54%)' },
-    { icon: FileCode, label: 'React', color: 'hsl(193, 95%, 68%)' },
-    { icon: Terminal, label: 'Node.js', color: 'hsl(120, 100%, 30%)' },
-    { icon: Database, label: 'Database', color: 'hsl(221, 83%, 53%)' },
-    { icon: GitBranch, label: 'Git', color: 'hsl(14, 100%, 53%)' },
+    { icon: Code2, label: 'HTML/CSS', color: 'hsl(16, 100%, 50%)', animation: 'animate-pulse' },
+    { icon: Braces, label: 'JavaScript', color: 'hsl(53, 93%, 54%)', animation: 'animate-spin-slow' },
+    { icon: FileCode, label: 'React', color: 'hsl(193, 95%, 68%)', animation: 'animate-bounce-slow' },
+    { icon: Terminal, label: 'Node.js', color: 'hsl(120, 100%, 30%)', animation: 'animate-float' },
+    { icon: Database, label: 'Database', color: 'hsl(221, 83%, 53%)', animation: 'animate-spin-slow-reverse' },
+    { icon: GitBranch, label: 'Git', color: 'hsl(14, 100%, 53%)', animation: 'animate-pulse' },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Hero = () => {
                   className={`
                     relative flex flex-col items-center justify-center p-8
                     rounded-lg border-2 transition-all duration-500 cursor-pointer
-                    ${isHovered ? 'animate-float scale-110 shadow-2xl' : 'border-border'}
+                    ${isHovered ? 'scale-110 shadow-2xl' : 'border-border'}
                   `}
                   style={{
                     borderColor: isHovered ? symbol.color : undefined,
@@ -61,7 +61,7 @@ const Hero = () => {
                 >
                   <Icon 
                     size={48} 
-                    className="transition-all duration-500"
+                    className={`transition-all duration-500 ${symbol.animation}`}
                     style={{ 
                       color: isHovered ? symbol.color : 'hsl(var(--muted-foreground))',
                     }}
