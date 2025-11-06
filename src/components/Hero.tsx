@@ -1,82 +1,88 @@
-
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
+import { useState } from 'react';
+import { Code2, Braces, Database, Terminal, FileCode, GitBranch } from 'lucide-react';
 
 const Hero = () => {
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/elavarasan_Resume.pdf'; // path in the public folder
-    link.download = 'Elavarasan_Resume.pdf'; // name for the downloaded file
-    link.click();
-  };
+  const [hoveredSymbol, setHoveredSymbol] = useState<number | null>(null);
+  const [isTextHovered, setIsTextHovered] = useState(false);
 
-
-   const handleLinkedInClick = () => {
-    window.open('https://linkedin.com/in/elavarasan-r-419128223', '_blank');
-  };
+  const programmingSymbols = [
+    { icon: Code2, label: 'HTML/CSS', color: 'hsl(16, 100%, 50%)' },
+    { icon: Braces, label: 'JavaScript', color: 'hsl(53, 93%, 54%)' },
+    { icon: FileCode, label: 'React', color: 'hsl(193, 95%, 68%)' },
+    { icon: Terminal, label: 'Node.js', color: 'hsl(120, 100%, 30%)' },
+    { icon: Database, label: 'Database', color: 'hsl(221, 83%, 53%)' },
+    { icon: GitBranch, label: 'Git', color: 'hsl(14, 100%, 53%)' },
+  ];
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Profile Image */}
-          <div className="flex justify-center lg:justify-start">
-            <Card className="p-8 hover-scale">
-              <div className="relative">
-                <img
-                  src="/lovable-uploads/4a71d8ff-02fd-4090-b483-ede88521a52a.png"
-                  alt="Professional headshot"
-                  className="w-80 h-80 object-cover rounded-lg shadow-lg" />
-                <div className="absolute inset-0 portfolio-gradient opacity-10 rounded-lg"></div>
-              </div>
-            </Card>
+          {/* Left Column - Text with Animation */}
+          <div 
+            className="text-center lg:text-left space-y-6 animate-fade-in"
+            onMouseEnter={() => setIsTextHovered(true)}
+            onMouseLeave={() => setIsTextHovered(false)}
+          >
+            <h1 
+              className={`text-5xl lg:text-7xl font-bold transition-all duration-500 ${
+                isTextHovered ? 'scale-110 portfolio-gradient bg-clip-text text-transparent' : ''
+              }`}
+            >
+              <span className="block">Hi</span>
+              <span className="block">This is My</span>
+              <span className="block">Portfolio Website</span>
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Explore my projects and skills
+            </p>
           </div>
 
-          {/* Right Column - Introduction */}
-          <div className="space-y-6 text-center lg:text-left">
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold">
-                <span className="block">Hi I'm</span>
-                <span className="block">Elavarasan R</span>
-                <span className="block portfolio-gradient bg-clip-text text-transparent">
-                  Web Developer
-                </span>
-              </h1>
-
-              <h2 className="text-xl lg:text-2xl text-muted-foreground font-medium">
-                
-              </h2>
-
-              <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Enthusiastic and self-driven web developer with foundational knowledge in HTML, CSS, and JavaScript.
-                Currently learning React.js and backend technologies to build full stack applications.
-                Strong interest in creating responsive, user-friendly interfaces and scalable solutions.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button
-                onClick={handleDownloadCV}
-                size="lg"
-                className="portfolio-gradient hover:opacity-90 transition-opacity"
-              >
-                Download CV
-              </Button>
-
-              <Button
-                onClick={handleLinkedInClick}
-                variant="outline"
-                size="lg"
-                className="hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                LinkedIn Profile
-              </Button>
-            </div>
+          {/* Right Column - Programming Symbols with Animation */}
+          <div className="grid grid-cols-3 gap-6 animate-slide-in-right">
+            {programmingSymbols.map((symbol, index) => {
+              const Icon = symbol.icon;
+              const isHovered = hoveredSymbol === index;
+              
+              return (
+                <div
+                  key={index}
+                  className={`
+                    relative flex flex-col items-center justify-center p-8
+                    rounded-lg border-2 transition-all duration-500 cursor-pointer
+                    ${isHovered ? 'animate-float scale-110 shadow-2xl' : 'border-border'}
+                  `}
+                  style={{
+                    borderColor: isHovered ? symbol.color : undefined,
+                    boxShadow: isHovered ? `0 0 30px ${symbol.color}40` : undefined,
+                  }}
+                  onMouseEnter={() => setHoveredSymbol(index)}
+                  onMouseLeave={() => setHoveredSymbol(null)}
+                >
+                  <Icon 
+                    size={48} 
+                    className="transition-all duration-500"
+                    style={{ 
+                      color: isHovered ? symbol.color : 'hsl(var(--muted-foreground))',
+                    }}
+                  />
+                  <span 
+                    className={`
+                      mt-3 text-sm font-medium transition-all duration-300
+                      ${isHovered ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}
+                    `}
+                    style={{ color: isHovered ? symbol.color : undefined }}
+                  >
+                    {symbol.label}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;
