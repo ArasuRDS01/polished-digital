@@ -25,14 +25,14 @@ const About = () => {
       </div>
 
       <div className="max-w-7xl w-full relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">About Me</h2>
           <div className="h-1 w-20 portfolio-gradient mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Profile Image */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.2s', animationFillMode: 'both' }}>
             <Card className="p-8 hover-scale">
               <div className="relative">
                 <img
@@ -46,7 +46,7 @@ const About = () => {
           </div>
 
           {/* Right Column - Introduction */}
-          <div className="space-y-6 text-center lg:text-left">
+          <div className="space-y-6 text-center lg:text-left animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <div className="space-y-4">
               <h3 className="text-3xl lg:text-4xl font-bold">
                 <span className="block">Elavarasan R</span>
@@ -62,7 +62,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.6s', animationFillMode: 'both' }}>
               <Button
                 onClick={handleDownloadCV}
                 size="lg"
