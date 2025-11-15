@@ -49,7 +49,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection('about')}
               className="text-foreground hover:text-primary transition-colors"
             >
               Home
@@ -112,7 +112,7 @@ const Header = () => {
           <div className="md:hidden bg-background/95 backdrop-blur-md border-t">
             <nav className="flex flex-col py-4 space-y-4">
               <button 
-                onClick={() => scrollToSection('home')}
+                onClick={() => scrollToSection('about')}
                 className="text-foreground hover:text-primary transition-colors text-left px-4 py-2"
               >
                 Home
