@@ -22,20 +22,35 @@ const Skills = () => {
 
   const certifications = [
     {
+      name: 'Web Developer Internship ',
+      issuer: 'WMP Creative Agencies',
+      year: '2023',
+      file: "/Completion-letter.pdf"
+    },
+    {
       name: 'JavaScript ',
       issuer: 'Guvi',
-      year: '2024'
+      year: '2024',
+      file: "/Javascript.pdf"
     },
     {
       name: 'HTML and  CSS',
       issuer: 'Guvi',
-      year: '2023'
+      year: '2023',
+      file: "/html&css.pdf"
     },
   ];
+const handleDownloadCertification = (filePath: string) => {
+  const link = document.createElement("a");
+  link.href = filePath;
+  link.download = filePath.split("/").pop() || "certificate.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
-  const handleDownloadCertification = (certName: string) => {
-    console.log(`Downloading ${certName} certificate...`);
-  };
+
+
 
   return (
     <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/20">
@@ -100,14 +115,16 @@ const Skills = () => {
                 <div key={cert.name} className="border-l-4 border-primary pl-4 py-2">
                   <h4 className="font-medium">{cert.name}</h4>
                   <p className="text-sm text-muted-foreground">{cert.issuer} • {cert.year}</p>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="mt-2"
-                    onClick={() => handleDownloadCertification(cert.name)}
-                  >
-                    Download Certificate
-                  </Button>
+                  {cert.file && (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="mt-2"
+                      onClick={() => handleDownloadCertification(cert.file!)}
+                    >
+                      Download Certificate
+                    </Button>
+                  )}
                 </div>
               ))}
             </div>

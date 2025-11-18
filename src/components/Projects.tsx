@@ -18,7 +18,7 @@ const Projects = () => {
       title: 'Theme-Selling Platform',
       description: 'Theme Selling Platform is a web-based application developed during my PG course to manage and sell website themes. It supports theme uploads, displays details like price and description, and includes search functionality. The preview feature is currently incomplete due to path issues and is planned for future improvement..',
       image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
+      technologies: ['HTML', 'CSS', 'Javascript', 'SQL'],
       demoUrl: 'https://demo-ecommerce.com',
       githubUrl: 'https://github.com/username/ecommerce-platform'
     },
