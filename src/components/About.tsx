@@ -49,6 +49,7 @@ const About = () => {
           <div className="space-y-6 text-center lg:text-left animate-fade-in" style={{ animationDelay: '0.4s', animationFillMode: 'both' }}>
             <div className="space-y-4">
               <h3 className="text-3xl lg:text-4xl font-bold">
+                <span className="block">Hi I'm</span>
                 <span className="block">Elavarasan R</span>
                 <span className="block portfolio-gradient bg-clip-text text-transparent">
                   Web Developer
