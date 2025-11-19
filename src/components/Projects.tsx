@@ -8,8 +8,8 @@ const Projects = () => {
   const projects = [
     {
       title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website showcasing projects, skills, and professional experience.',
-      image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop',
+      description: 'A modern, responsive portfolio website showcasing projects, skills, and professional experience.The goal of the project was to design a clean and visually appealing interface that represents my identity as a web developer and helps visitors understand my work at a glance.',
+      image: '/uploads/portfolio.png',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
       demoUrl: 'https://polished-digital.lovable.app',
       githubUrl: 'https://github.com/username/portfolio'
@@ -17,19 +17,19 @@ const Projects = () => {
     {
       title: 'Theme-Selling Platform',
       description: 'Theme Selling Platform is a web-based application developed during my PG course to manage and sell website themes. It supports theme uploads, displays details like price and description, and includes search functionality. The preview feature is currently incomplete due to path issues and is planned for future improvement..',
-      image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=300&fit=crop',
-      technologies: ['HTML', 'CSS', 'Javascript', 'SQL'],
-      demoUrl: 'https://demo-ecommerce.com',
-      githubUrl: 'https://github.com/username/ecommerce-platform'
+      image: '/uploads/Tswebsite.png',
+      technologies: ['HTML', 'CSS', 'Javascript', 'PHP', 'SQL'],
+      demoUrl: 'http://localhost/Myproject/ThemeSelling/index.php',
+      githubUrl: 'https://github.com/ArasuRDS01/TS-website'
     },
     
     {
       title: 'Student Project Managment ',
       description: 'This is a simple web-based application that allows students to submit their project details for staff approval. The system helps in managing, viewing, and organizing student project submissions..',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop',
+      image: '/uploads/PMS.png',
       technologies: ['HTML', 'CSS', 'JavaScript', 'SQL'],
       demoUrl: '',
-      githubUrl: 'https://github.com/username/weather-dashboard'
+      githubUrl: 'https://github.com/ArasuRDS01/PMS'
     },
   
   ];

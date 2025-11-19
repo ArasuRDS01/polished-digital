@@ -36,7 +36,7 @@ const About = () => {
             <Card className="p-8 hover-scale">
               <div className="relative">
                 <img
-                  src="/lovable-uploads/4a71d8ff-02fd-4090-b483-ede88521a52a.png"
+                  src="/uploads/4a71d8ff-02fd-4090-b483-ede88521a52a.png"
                   alt="Professional headshot of Elavarasan R"
                   className="w-80 h-80 object-cover rounded-lg shadow-lg"
                 />

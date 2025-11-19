@@ -22,7 +22,7 @@ const Skills = () => {
 
   const certifications = [
     {
-      name: 'Web Developer Internship ',
+      name: 'Internship Certificate ',
       issuer: 'WMP Creative Agencies',
       year: '2023',
       file: "/Completion-letter.pdf"
@@ -33,6 +33,7 @@ const Skills = () => {
       year: '2024',
       file: "/Javascript.pdf"
     },
+    
     {
       name: 'HTML and  CSS',
       issuer: 'Guvi',
